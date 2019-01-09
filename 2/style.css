@@ -1,0 +1,197 @@
+body {
+	width: 100%;
+	height: auto;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: 0;
+	background-color: #6d8fc170; 
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #273c75;
+  width: 100%;
+}
+
+li {
+  float: left;
+  height: 60px;
+}
+
+li a {
+  display: block;
+  color: #8c7ae6;
+  text-align: center;
+  padding: 25px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #192a56;
+}
+
+#top-header {
+	height: 80px;
+	width: 100%;
+	background-color: #192a56;
+	text-align: left;
+}
+#navn {
+	color: #00a8ff;
+	font-size: 30px;
+	font-family: "Times New Roman", Times, serif;
+	float: left;
+	margin: 22px;
+}
+#logo {
+	float: right;
+	margin: 20px;
+}
+#krop {
+	height: auto;
+	width: 70%;
+	position: absolute;
+	top: 140px;
+	
+	left: 0;
+	right: 0;
+	margin: auto;
+	background-color: #335075;
+
+}
+
+h1 {
+	margin-left: 20px; 
+	text-align: left;
+}
+h3 {
+	text-align: center;
+	font-size: 40px;
+}
+#overskrift {
+	top: 0px;
+	position: absolute;
+	background-color:#3c6382;
+	margin: 3%;
+	height: auto;
+	min-height: 60px;
+	width: 65%;
+	border: 1px solid #2c3e5091;
+}
+#formel {
+	top: 0px;
+	position: relative;
+	float: right;
+	background-color:#3c6382;
+	margin: 3%;
+	height: 765px;
+	width: 28%;
+	border: 1px solid #2c3e5091;
+}
+
+#formelpara {
+	margin: 5%
+}
+
+#information {
+	top: 85px;
+	position: relative;
+	background-color:#3c6382;
+	margin: 3%;
+	height: 680px;
+	width: 65%;
+	border: 1px solid #2c3e5091;
+	word-break: keep-all;
+}
+
+#infopara {
+	margin: 5%
+}
+
+#interaktiv {
+	top: 60px;
+	position: relative;
+	background-color:#3c6382;
+	margin: 3%;
+	width: 94%;
+	text-align: left;
+	border: 1px solid #2c3e5091;
+}
+
+#interpara {
+	margin: 5%
+}
+
+#canvascss {
+	top: 35px;
+	position: relative;
+	background-color:#3c6382;
+	margin: 3%;
+	margin-bottom: 5%;
+	width: 94%;
+	text-align: left;
+	border: 1px solid #2c3e5091;
+}
+
+#myCanvas {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.fraction {
+    display: inline-block;
+    vertical-align: middle; 
+    margin: 0 0.2em 0.4ex;
+    text-align: center;
+}
+.fraction > span {
+    display: block;
+    padding-top: 0.15em;
+}
+.fraction span.nævner {border-top: thin solid black;}
+.fraction span.brøkstreg {display: none;}
+
+#p1 {
+    padding : 0;
+    margin : 0;
+}
+
+#result {
+	padding : 0;
+    margin : 0;
+	margin: 5%
+}
+
+#cirkelpic{
+	position: relative;	
+	left: 20%;
+	margin-bottom: 7.7%;
+	border: 2px solid #2c3e5091;
+}
+
+#linjepic{
+	position: relative;
+	right: 20%;
+	margin-bottom: 7.7%;
+	border: 2px solid #2c3e5091;
+}
+
+input {
+	background-color: #6d8fc170;
+	border: 1px solid #2c3e5091;
+	text-align: center;
+}
+
+button {
+	text-align: center;
+	background-color: #335075;
+	color: black;
+	border: none;
+	border-radius: 10%;
+	border: 1px solid #2c3e5091;
+}

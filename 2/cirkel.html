@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>uge2sop</title>
+	<meta charset="utf-8">
+	<link rel="icon" href="./favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+	<script src="javascript.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="top-header">
+		<div id="navn">LineCirCalc</div>
+	</div>
+	<ul>
+		<li style="width: 33.33%"><a href="./index.html">Forside</a></li>
+		<li style="width: 33.33%"><a href="./linje.html">Linje</a></li>
+		<li style="width: 33.33%"><a href="./cirkel.html">Cirkel</a></li>
+	</ul>
+	<div id="krop">
+		<div id="overskrift">
+			<h1>Cirklens ligning:</h1>
+		</div>
+		<div id="formel">
+			<h1>Formler:</h1>
+			<div id="formelpara">
+			<p><p><strong>Cirklens ligning:</strong></p><p align="center"><i>(x - a)&#178 + (y - b)&#178 = r&#178</i></p></p><br>
+			<p><strong>Udregn om punkt er på periferien:</strong><br>Step 1:<p align="center"><i>Udregn radius</i></p>Step 2:<p align="center"><i>Indsæt det givne punkts x og y i ligningen:</i><br>(x - a)&#178 + (y - b)&#178</p><p>Step 3:</p><p align="center"><i>Hvis resultatet fra step 2 er lig med radius, så er punktet på periferien!</i></p></p></div>
+		</div>
+		<div id="information">
+			<h1>Information: </h1>
+			<div id="infopara">
+				<p>På samme måde som man kan skrive en forskrift for en lige linje, kan man også skrive en forskrift for en cirkel. Man bruger forskriften til en cirkel til at finde ud af om et punkt ligger på cirklens periferi.</p>
+				<p>Formlen til denne udregning ser sådan ud:</p>
+				<p align="center">(x - a)&#178 + (y - b)&#178 = r&#178</p>
+				<p>Dette kan feks. Se sådan her ud:</p>
+				Centrum = (1,2) <br>
+				Radius = 5
+				<p align="center">(x - 1)&#178 + (y - 2)&#178 = 25</p>
+				<p>Hvis man så vil tjekke om et punkt ligger på cirklens periferi så indsætter mand bare henholdsvis punktets x og y værdi istedet for x og y.</p>
+				Punkt = 5,5<br>
+				<p align="center">(5 - 1)&#178 + (5 - 2)&#178 = 4&#178 + 3&#178 = 16 + 9 = 25 = r&#178</p> 
+				<p>Hvis resultatet så er det samme som r&#178 så ligger punktet på cirklens periferi, er resultatet dog noget andet så ligger punktet ikke på cirklens periferi.</p>
+			</div>
+		</div>
+		<div id="interaktiv">
+			<h1>Interaktiv:</h1>
+			<div id="interpara" align="center">
+				<p>Centrum kordinat</p>
+				<input id="cord1" type="text" value="1,4">
+				<p>Radius</p>
+				<input id="radius" type="text" value="5">
+				<br><br>
+				<button onclick="beregn2()">Beregn</button>
+				<br><br>
+				<p>Periferi kordinat</p>
+				<input id="cord2" type="text" value="6,4">
+				<br><br>
+				<button onclick="beregn3()">Beregn</button>
+			</div>
+		</div>
+		<div id="canvascss">
+			<h1>Canvas:</h1>
+			<h2 align="center" id="result">Resultat</h2>
+			<canvas id="myCanvas" width="700" height="600" style="border: 2px dotted #2c3e50;">Your browser does not support the canvas element.</canvas>
+		</div>
+	</div>
+</body>
+</html>

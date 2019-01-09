@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>uge2sop</title>
+	<meta charset="utf-8">
+	<link rel="icon" href="./favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+	<script src="javascript.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="top-header">
+		<div id="navn">LineCirCalc</div>
+	</div>
+	<ul>
+		<li style="width: 33.33%"><a href="./index.html">Forside</a></li>
+		<li style="width: 33.33%"><a href="./linje.html">Linje</a></li>
+		<li style="width: 33.33%"><a href="./cirkel.html">Cirkel</a></li>
+	</ul>
+	<div id="krop">
+		<div id="overskrift">
+			<h1>Linje:</h1>
+		</div>
+		<div id="formel">
+			<h1>Formler:</h1>
+			<div id="formelpara">
+			<p><strong>Linjens ligning:</strong></p><p align="center"><i>f(x) = a &#183 x + b</i></p><br>
+			<p id="p1"><strong>Find a:</strong></p><p id="p1" align="center">
+				<div id="brøk" align="center">
+					<i>a =</i> 
+					<div class="fraction">
+					<span class="tæller"><i>y<sub>2</sub>-y<sub>1</sub></span></i>
+					<span class="brøkstreg">/</span>
+					<span class="nævner"><i>x<sub>2</sub>-x<sub>1</sub></span></i>
+					</div>
+				</div>
+			</p>
+			<p><strong>Find b:</strong></p><p align="center">b = y<sub>1</sub> – a &#183 x<sub>1</sub></p>
+			</div>
+		</div>
+		<div id="information">
+			<h1>Information:</h1>
+			<div id="infopara"><p>Hvis man har 2 punkter til en funktion ( f(x) = ax + b ), (x<sub>1</sub>, y<sub>1</sub>) og (x<sub>2</sub>, y<sub>2</sub>), kan man bruge denne her udregning til at beregne a og b med:</p>
+			 		<div id="brøk" align="center">
+					a = 
+					<div class="fraction">
+					<span class="tæller">y<sub>2</sub>-y<sub>1</sub></span>
+					<span class="brøkstreg">/</span>
+					<span class="nævner">x<sub>2</sub>-x<sub>1</sub></span>
+					</div>
+ 			<p align="center">b = y<sub>1</sub> – a &#183 x<sub>1</sub></p>
+ 			<p align="left">De kan så bruges i linjens ligning som er:</p>
+ 			<p align="center">f(x) = a &#183 x + b</p><br>
+ 			<h4 id="p2" align="left">Eksempel:</h4>
+ 			<p align="left">Som eksempel kan vi tage to punkter som (-4,2) og (5,5).</p>
+ 			<p>Vi udregner a:</p>
+ 				<div id="brøk" align="center">
+					a = 
+					<div class="fraction">
+					<span class="tæller">y<sub>2</sub>-y<sub>1</sub></span>
+					<span class="brøkstreg">/</span>
+					<span class="nævner">x<sub>2</sub>-x<sub>1</sub></span>
+					</div>
+					= 
+					<div class="fraction">
+					<span class="tæller">5 - 2</span>
+					<span class="brøkstreg">/</span>
+					<span class="nævner"> 5 - (-4)</span>
+					</div>
+					= 
+					<div class="fraction">
+					<span class="tæller">5 - 2</span>
+					<span class="brøkstreg">/</span>
+					<span class="nævner"> 5 + 4)</span>
+					</div>
+					=
+					<div class="fraction">
+					<span class="tæller">3</span>
+					<span class="brøkstreg">/</span>
+					<span class="nævner">9</span>
+					</div>
+					= 0,3333
+					</div> 			 			
+ 			<p align="left">Vi udregner b:</p> 
+ 				<p align="center">b = y<sub>1</sub> – a &#183 x<sub>1</sub> = 2 - 0,3333 &#183 (-4) = 3,3333</p>
+ 			<p align="left">a og b indsættes i linjens ligning:</p>
+ 				<p align="center">f(x) = 0,3333x + 3,3333</p>
+ 		</div>
+		</div>
+		</div>
+		<div id="interaktiv">
+			<h1>Interaktiv:</h1>
+			<div id="interpara" align="center">
+				<p>Kordinat 1</p>
+				<input id="cord1" type="text" value="-2,-7">
+				<p>Kordinat 2</p>
+				<input id="cord2" type="text" value="3,5">
+				<br><br>
+				<button onclick="beregn()">Beregn</button>
+			</div>
+		</div>
+		<div id="canvascss" align="center">
+			<h1>Canvas:</h1>
+			<h2 align="center" id="result">Resultat</h2>
+			<canvas id="myCanvas" width="700" height="600" style="border: 2px dotted #2c3e50;">Your browser does not support the canvas element.</canvas>
+		</div>
+	</div>
+</body>
+</html>
