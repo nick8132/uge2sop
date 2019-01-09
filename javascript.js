@@ -44,10 +44,11 @@ function beregn3() {
 				console.log("not a number");
 			}else{
 				if(Math.pow(radius, 2) == peri(cord, cord1)){
-					result.innerHTML = "kordinatet er på cirklen"
+					result.innerHTML = "Kordinatet er på cirklen"
 					drawcord(cord1)
 				}else{
-					result.innerHTML = "kordinatet er ikke på cirklen"
+					result.innerHTML = "Kordinatet er ikke på cirklen"
+					drawcord(cord1)
 				}
 			}
 		}
@@ -80,8 +81,8 @@ function findab(cord1, cord2) {
 	console.log(cord1x+cord1y+cord2x+cord2y);
 	var a = ((cord2y-cord1y) / (cord2x-cord1x)).toFixed(3)
 	var b = cord2y-(a*cord2x).toFixed(2)
-	var c = [];c[0]=10;c[1]=a*10+b
-	var d = [];d[0]=-10;d[1]=a*-10+b
+	var c = [];c[0]=200;c[1]=a*200+b
+	var d = [];d[0]=-200;d[1]=a*-200+b
 	drawline(c, d)
 	if(b>=0){console.log("f(x)="+a+"x"+"+"+b)}else{console.log("f(x)="+a+"x"+""+b)}
 	if(b>=0){result.innerHTML="f(x)="+a+"x"+"+"+b;}else{result.innerHTML="f(x)="+a+"x"+""+b;}
@@ -101,17 +102,17 @@ function drawgrid() {
 	var canvas = document.getElementById("myCanvas");
 	var C = canvas.getContext("2d");
 	C.lineWidth = 1;
-	for (var i = (canvas.width / 50); i >= 0; i--) {
+	for (var i = (canvas.width / 25); i >= 0; i--) {
 		C.beginPath();
 		C.strokeStyle = '#9b59b6'
-		C.moveTo(50 * i, 0);
-		C.lineTo(50 * i, canvas.height);
+		C.moveTo(25 * i, 0);
+		C.lineTo(25 * i, canvas.height);
 		C.stroke();
 	}
-	for (var i = (canvas.height / 50); i >= 0; i--) {
+	for (var i = (canvas.height / 25); i >= 0; i--) {
 		C.beginPath();
-		C.moveTo(0, 50 * i);
-		C.lineTo(canvas.width, 50 * i);
+		C.moveTo(0, 25 * i);
+		C.lineTo(canvas.width, 25 * i);
 		C.stroke();
 	}
 	C.beginPath();
@@ -138,9 +139,9 @@ function drawcord(a) {
 	C.beginPath();
 	C.lineWidth = 10;
 	C.strokeStyle = '#c0392b'
-	C.strokeRect(centerY+(50*a[0])-3, centerX+(50*(-1*a[1]))-3, 6, 6);
+	C.strokeRect(centerY+(25*a[0])-1, centerX+(25*(-1*a[1]))-1, 2, 2);
 }
-//centerY+(50*a[0])-3, centerX+(50*(-1*a[1]))-3
+//centerY+(25*a[0])-3, centerX+(25*(-1*a[1]))-3
 function drawline(a, b) {
 	var canvas = document.getElementById("myCanvas");
 	var C = canvas.getContext("2d");
@@ -149,8 +150,8 @@ function drawline(a, b) {
 	C.beginPath();
 	C.lineWidth = 3;
 	C.strokeStyle = '#c0392b'
-	C.moveTo(centerY+(50*a[0]), centerX+(50*(-1*a[1])))
-	C.lineTo(centerY+(50*b[0]), centerX+(50*(-1*b[1])))
+	C.moveTo(centerY+(25*a[0]), centerX+(25*(-1*a[1])))
+	C.lineTo(centerY+(25*b[0]), centerX+(25*(-1*b[1])))
 	C.stroke();
 }
 function drawcircle(c, r) {
@@ -164,7 +165,7 @@ function drawcircle(c, r) {
 	C.beginPath();
 	C.lineWidth = 3;
 	C.strokeStyle = '#c0392b'
-	C.arc(centerY+(50*c[0]), centerX+(50*(-1*c[1])), r*50, 0, 2 * Math.PI);
+	C.arc(centerY+(25*c[0]), centerX+(25*(-1*c[1])), r*25, 0, 2 * Math.PI);
 	C.stroke();
 }
 function peri(ccord2, ccord3) {
