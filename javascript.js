@@ -91,10 +91,16 @@ function cirkelberegner(ccord, radius) {
 	drawcircle(ccord, radius)
 	ccord = ccord.split(",")
 	console.log("(x-"+ccord[0]+")²+(y-"+ccord[1]+")² = " + radius + "²")
-	if(ccord>=0){
+	if(ccord[0]>=0 && ccord[1]>=0){
 		result.innerHTML = "(x-"+ccord[0]+")²+(y-"+ccord[1]+")² = " + radius + "²"
-	}else{
-		result.innerHTML = "(x"+ccord[0]+")²+(y+"+ccord[1]+")² = " + radius + "²"
+	}else if(ccord[0]<0 && ccord[1]>=0){
+		result.innerHTML = "(x+"+Math.abs(ccord[0])+")²+(y-"+ccord[1]+")² = " + radius + "²"
+	}else if (ccord[0]>=0 && ccord[1]<0) {
+		result.innerHTML = "(x-"+ccord[0]+")²+(y+"+Math.abs(ccord[1])+")² = " + radius + "²"
+	}else if(ccord[0]<0 && ccord[1]<0){
+		result.innerHTML = "(x+"+Math.abs(ccord[0])+")²+(y+"+Math.abs(ccord[1])+")² = " + radius + "²"
+	}else {
+		result.innerHTML = "Something went wrong... :("
 	}
 }
 
@@ -104,7 +110,7 @@ function drawgrid() {
 	C.lineWidth = 1;
 	for (var i = (canvas.width / 25); i >= 0; i--) {
 		C.beginPath();
-		C.strokeStyle = '#9b59b6'
+		C.strokeStyle = 'black'
 		C.moveTo(25 * i, 0);
 		C.lineTo(25 * i, canvas.height);
 		C.stroke();
@@ -138,7 +144,7 @@ function drawcord(a) {
 	var centerX = canvas.height/2
 	C.beginPath();
 	C.lineWidth = 10;
-	C.strokeStyle = '#c0392b'
+	C.strokeStyle = 'red'
 	C.strokeRect(centerY+(25*a[0])-1, centerX+(25*(-1*a[1]))-1, 2, 2);
 }
 //centerY+(25*a[0])-3, centerX+(25*(-1*a[1]))-3
@@ -149,7 +155,7 @@ function drawline(a, b) {
 	var centerX = canvas.height/2
 	C.beginPath();
 	C.lineWidth = 3;
-	C.strokeStyle = '#c0392b'
+	C.strokeStyle = 'red'
 	C.moveTo(centerY+(25*a[0]), centerX+(25*(-1*a[1])))
 	C.lineTo(centerY+(25*b[0]), centerX+(25*(-1*b[1])))
 	C.stroke();
@@ -164,7 +170,7 @@ function drawcircle(c, r) {
 	var centerX = canvas.height/2
 	C.beginPath();
 	C.lineWidth = 3;
-	C.strokeStyle = '#c0392b'
+	C.strokeStyle = 'red'
 	C.arc(centerY+(25*c[0]), centerX+(25*(-1*c[1])), r*25, 0, 2 * Math.PI);
 	C.stroke();
 }
