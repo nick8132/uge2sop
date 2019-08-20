@@ -91,10 +91,10 @@ function cirkelberegner(ccord, radius) {
 	drawcircle(ccord, radius)
 	ccord = ccord.split(",")
 	console.log("(x-"+ccord[0]+")²+(y-"+ccord[1]+")² = " + radius + "²")
-	if(ccord>=0 || ccord>=0){
+	if(ccord>=0){
 		result.innerHTML = "(x-"+ccord[0]+")²+(y-"+ccord[1]+")² = " + radius + "²"
 	}else{
-		result.innerHTML = "(x+"+ccord[0]+")²+(y+"+ccord[1]+")² = " + radius + "²"
+		result.innerHTML = "(x"+ccord[0]+")²+(y+"+ccord[1]+")² = " + radius + "²"
 	}
 }
 
